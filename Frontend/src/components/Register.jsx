@@ -1,6 +1,6 @@
 import  { useState } from 'react';
 import axios from 'axios';
-
+//  day 2
 const Register = () => {
   const [formData, setFormData] = useState({
     name: '',
