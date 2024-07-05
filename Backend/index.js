@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import { register, login } from "./User/User.model.js"
+import { register, login, Logout } from "./User/User.model.js"
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -14,6 +14,7 @@ app.use(bodyParser.json());
 
 app.post('/register', register);
 app.post('/login', login);
+app.post('/logout', Logout);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

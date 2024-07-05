@@ -1,16 +1,15 @@
 import bcryptjs from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
-const JWT_SECRET = process.env.JWT_SECRET_KEY ;
+const JWT_SECRET = process.env.JWT_SECRET_KEY;
 
 const register = async (req, res) => {
   const { name, email, password, phone, pincode } = req.body;
 
   try {
-    const hashedPassword = await bcryptjs.hash(password, 10); 
+    const hashedPassword = await bcryptjs.hash(password, 10);
     const user = await prisma.user.create({
       data: {
         name,
@@ -41,10 +40,15 @@ const login = async (req, res) => {
       return res.status(401).json({ error: 'Invalid password' });
     }
     const token = jwt.sign({ userId: user.id }, JWT_SECRET, { expiresIn: '1h' });
-    res.json({ message : "user login successfully" });
+    res.json({ message: 'User login successful', token });
+
   } catch (error) {
     res.status(500).json({ error: 'Internal server error' });
   }
 };
 
-export { register, login };
+const Logout = (req, res) => {
+  res.clearCookie('token');
+  res.json({ message: 'User logged out successfully' });
+}
+export { register, login, Logout };
