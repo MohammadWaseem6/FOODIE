@@ -34,7 +34,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/your-username/foodie.git
+git clone https://github.com/Mohammadwaseem6/foodie.git
 cd foodie
 Install dependencies:
 
@@ -47,7 +47,7 @@ Start the development server:
 bash
 Copy code
 npm run dev
-Open your browser and navigate to http://localhost:3000 to view the application.
+Open your browser and navigate to http://localhost:8081 to view the application.
 
 API Endpoints
 The backend provides the following API endpoints:
