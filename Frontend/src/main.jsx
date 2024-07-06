@@ -9,6 +9,8 @@ import Contact from './components/Contact';
 import Login from './components/Login';
 import Register from './components/Register';
 import About from './components/About';
+import Services from './components/Services';
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -21,6 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
         {/* <Route path="/logout" element={<Logout />} /> */}
 
         <Route path="*" element={<h1>Page Not Found</h1>} />

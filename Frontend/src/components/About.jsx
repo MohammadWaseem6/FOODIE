@@ -1,5 +1,5 @@
-import React from 'react';
-import { FaTruck, FaGlobe, FaPlane, FaMapMarkerAlt, FaStar } from 'react-icons/fa'; // Importing icons from react-icons
+
+import { FaTruck, FaGlobe, FaPlane, FaMapMarkerAlt, FaStar } from 'react-icons/fa';
 
 const About = () => {
   return (
@@ -66,7 +66,7 @@ const About = () => {
             <h2 className="text-3xl font-semibold text-white mb-4">Customer Reviews</h2>
             <div className="flex items-center mb-4">
               <FaStar className="text-yellow-400 mr-2" />
-              <p className="text-lg text-white leading-relaxed">"The food quality is exceptional, and the delivery is always on time!"</p>
+              <p className="text-lg text-white leading-relaxed">The food quality is exceptional, and the delivery is always on time!</p>
             </div>
           </div>
         </div>
@@ -75,7 +75,7 @@ const About = () => {
           <div>
             <div className="flex items-center mb-4">
               <FaStar className="text-yellow-400 mr-2" />
-              <p className="text-lg text-white leading-relaxed">"I love the variety of cuisines available, it's like traveling the world through food!"</p>
+              <p className="text-lg text-white leading-relaxed">I love the variety of cuisines available, its like traveling the world through food!</p>
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@ const About = () => {
           <div>
             <div className="flex items-center mb-4">
               <FaStar className="text-yellow-400 mr-2" />
-              <p className="text-lg text-white leading-relaxed">"Great customer service! They really go above and beyond to make sure you're satisfied."</p>
+              <p className="text-lg text-white leading-relaxed">Great customer service! They really go above and beyond to make sure you re satisfied.</p>
             </div>
           </div>
         </div>
@@ -93,7 +93,7 @@ const About = () => {
           <div>
             <div className="flex items-center mb-4">
               <FaStar className="text-yellow-400 mr-2" />
-              <p className="text-lg text-white leading-relaxed">"Consistently delicious meals, always delivered with a smile."</p>
+              <p className="text-lg text-white leading-relaxed">Consistently delicious meals, always delivered with a smile.</p>
             </div>
           </div>
         </div>
@@ -102,7 +102,7 @@ const About = () => {
           <div>
             <div className="flex items-center">
               <FaStar className="text-yellow-400 mr-2" />
-              <p className="text-lg text-white leading-relaxed">"Reliable service and high-quality ingredients make them my go-to for food delivery."</p>
+              <p className="text-lg text-white leading-relaxed">Reliable service and high-quality ingredients make them my go-to for food delivery.</p>
             </div>
           </div>
         </div>

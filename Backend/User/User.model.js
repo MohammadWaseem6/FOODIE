@@ -51,4 +51,32 @@ const Logout = (req, res) => {
   res.clearCookie('token');
   res.json({ message: 'User logged out successfully' });
 }
-export { register, login, Logout };
+
+const order = async (req, res) => {
+  const { name, details } = req.body;
+
+  try {
+    const user = await prisma.user.findFirst({
+      where: { name },
+    });
+
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    const newOrder = await prisma.order.create({
+      data: {
+        userId: user.id,
+        details,
+      },
+    });
+
+    res.status(201).json({message: " order placed successfully ", newOrder});
+  } catch (error) {
+
+    console.error('Error placing order:', error);
+    res.status(400).json({ error: 'Failed to place order' });
+  }
+};
+
+export { register, login, Logout, order };
